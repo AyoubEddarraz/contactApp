@@ -1,0 +1,16 @@
+.formField{
+  width: 50%;
+  margin: 0 auto;
+
+  .inputField{
+    display: block;
+  }
+
+}
+
+
+@media screen and (max-width: 500px) {
+  .formField{
+    width: 100%;
+  }
+}

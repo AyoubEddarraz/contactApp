@@ -1,0 +1,30 @@
+<div class="contactComponent">
+  <!-- Search Input -->
+  <mat-form-field appearance="fill" class="searchInput">
+    <mat-label>Search</mat-label>
+    <input type="text" matInput placeholder="Ex. mohammed" name="search" ngModel [(ngModel)]="search" (keyup)="filterContact()">
+    <mat-hint align="end">search in contact list</mat-hint>
+    <mat-icon matPrefix>search</mat-icon>
+    <mat-icon matSuffix class="icone" (click)="clearSearchInput()">close</mat-icon>
+  </mat-form-field>
+
+  <!-- List Of Contact -->
+  <h2 class="my-3 title">contacts</h2>
+  <mat-list role="list">
+    <ng-container *ngFor="let contact of contactsFiltered">
+      <mat-expansion-panel class="panel">
+        <mat-expansion-panel-header class="panelHeader">
+          <div class="panelInfo mx-2">
+            <p> {{ contact.contactName }}  </p>
+            <p> {{ contact.contactNumero }} </p>
+          </div>
+        </mat-expansion-panel-header>
+        <mat-action-row>
+          <button mat-button color="warn" (click)="deleteContact(contact)">Delete</button>
+          <button mat-button color="primary" (click)="updateContact(contact)">Update</button>
+        </mat-action-row>
+      </mat-expansion-panel>
+    </ng-container>
+  </mat-list>
+
+</div>

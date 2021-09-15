@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url("~bootstrap/dist/css/bootstrap.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+html, body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden auto;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.icone{
+  cursor: pointer !important;
+}
+
+.contactComponent{
+  padding: 20px;
+}
+
+p{
+  font-family: 'Roboto Condensed', sans-serif !important;
+  font-weight: 600;
+}
+
+.title{
+  font-family: 'Roboto Condensed', sans-serif !important;
+  text-transform: uppercase;
+  font-weight: 700 !important;
+}

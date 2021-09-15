@@ -1,0 +1,24 @@
+ul{
+  width: 90%;
+  list-style: none;
+  margin: 0 auto;
+  text-align: start;
+  padding: 0;
+
+  li{
+    width: 100%;
+    margin: 10px 0;
+    background-color: #ecf0f1;
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+
+    &.active{
+      background-color: #13AAD6;
+      color: white;
+    }
+
+  }
+
+
+}

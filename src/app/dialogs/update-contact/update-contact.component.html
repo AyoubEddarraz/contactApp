@@ -1,0 +1,24 @@
+<h2 mat-dialog-title>update contact</h2>
+<mat-dialog-content>
+  <form #formContact [formGroup]="addContactForm" class="formField bg-light p-3 rounded shadow-sm">
+
+    <mat-form-field class="inputField my-2" appearance="fill">
+      <mat-label>contact name</mat-label>
+      <input type="text" matInput placeholder="ex. Mohammed" formControlName="contactName">
+      <mat-icon matPrefix>person</mat-icon>
+      <mat-error>contact name is <strong>required</strong></mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="inputField my-2" appearance="fill">
+      <mat-label>contact number</mat-label>
+      <input type="number" matInput placeholder="ex. +212706555319" formControlName="contactNumero">
+      <mat-icon matPrefix>phone</mat-icon>
+      <mat-error>contact number is <strong>required</strong></mat-error>
+    </mat-form-field>
+
+    <mat-action-row align="end">
+      <button mat-button [mat-dialog-close]="null">Close</button>
+      <button mat-raised-button [mat-dialog-close]="response" color="warn" class="my-3" [disabled]="!addContactForm.valid" (click)="updateContact()">update</button>
+    </mat-action-row>
+  </form>
+</mat-dialog-content>
